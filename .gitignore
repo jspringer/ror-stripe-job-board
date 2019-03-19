@@ -24,3 +24,11 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore old drafts
+.old
+.old2
+.old3
+
+# Ignore Heroku Procfile
+Procfile
