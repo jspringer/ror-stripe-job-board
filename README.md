@@ -34,9 +34,7 @@ If running locally, install the gems via `bundle install` from the command line.
 
 If running from a server, follow the instructions for running a Rails app on it (again, follow [this guide]((https://devcenter.heroku.com/articles/getting-started-with-rails5)) if using Heroku).
 
-##### Jobs
-
-Each `Job` will house quite a few fields of which are imporant for any type of job listing online.
+#### Database details
 
 Each `Job` will feature the following:
 
