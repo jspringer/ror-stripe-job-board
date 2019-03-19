@@ -38,7 +38,4 @@ Each `User` will have:
   - Expires at - `expires_at:datetime`
   - Admin - `admin:boolean`
 
-
-Read more at [web-crunch.com ›](https://web-crunch.com/lets-build-with-ruby-on-rails-job-board-with-payments/)
-
-
+[Demo]()
