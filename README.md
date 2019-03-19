@@ -38,4 +38,4 @@ Each `User` will have:
   - Expires at - `expires_at:datetime`
   - Admin - `admin:boolean`
 
-[Demo]()
+[Demo](https://jsnspr-ror-stripe-job-board.herokuapp.com)
