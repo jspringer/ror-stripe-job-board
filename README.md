@@ -1,14 +1,38 @@
 ## Job Board
 
-The basis of the application is a job board where anyone looking to get hired can come and apply for positions. If you are a user or company looking to post a job you can sign up for an account and do so for a fee. We use a combination of the [Stripe](https://stripe.com) API and the Stripe Ruby Gem to initialize a charge when a job gets posted.
+Simple CRUD job board that allows logged in users to post new job listings for a set fee (default set is $3000 (3000) for 30 day). The charges and credit card form is handled by [Stripe](https://stripe.com) via the Stripe API and Ruby Gem. 
 
 If there are errors along the way the form will offer error feedback for both the Rails based form and the Stripe based form.
 
-### Stripe Integration
+[Demo](https://jsnspr-ror-stripe-job-board.herokuapp.com)
 
-Stripe has a variety of solutions when it comes to accepting payments securely. There's really no wrong way to do so but some applications may favor alternative approaches. In our case I opted for [Stripe Elements](https://stripe.com/elements) which is a drop in replacement that allows you to display a form for the credit card of which you can manipulate at will.
+### Set up
 
-Styling it or triggering something to happen upon user input is completely up to you. If you'd rather bypass all of that customization you can always integrate the originally [Stripe.js](https://stripe.com/docs/stripe-js) library and or use [Stripe Checkout](https://stripe.com/docs/checkout) which is as simple as dropping in a form with key value pairs inside your application.
+Copy the files locally.
+
+Make sure you have [PostgreSQL installed](https://www.postgresql.org/).
+
+Edit db/seeds.rb and replace the default user info with your own or any fake account you wish to use. Don't use a password you use for other accounts. You can also edit the default job seeds to whatever you want or remove them entirely. 
+
+Set up a free [Stripe](https://stripe.com) account. You do not need to set up a full account unless you want to do live charges. Otherwise, the test publishable and secret keys will work fine, which can found [here](https://dashboard.stripe.com/account/apikeys). 
+
+If running locally, these keys need to be placed in the config/application.yml file: 
+
+```
+development:
+  stripe_api_key: sk_test_r4nD0Ml3tT3Rs4nDnUmB3Rs
+  stripe_publishable_key: pk_test_r4nD0Ml3tT3Rs4nDnUmB3Rs
+
+production:
+  stripe_api_key: sk_test_r4nD0Ml3tT3Rs4nDnUmB3Rs
+  stripe_publishable_key: pk_test_r4nD0Ml3tT3Rs4nDnUmB3Rs
+  ```
+
+If running on a server, you will need to set up the environment variables on the server. For example, on Heroku, once you have the app set up (see [this guide](https://devcenter.heroku.com/articles/getting-started-with-rails5) for instructions), run: `heroku config:set stripe_publishable_key=your_publishable_key_here stripe_api_key=your_secret_key_here`from the command line. For a test credit card, use: 4242 4242 4242 4242, 04/24, 242, 00001. This is a recognized test Visa account and no one will be charged. 
+
+If running locally, install the gems via `bundle install` from the command line. If you make any changes to the Gemfile, you need to run `bundle install` again to generate a new a new Gemfile.lock file. 
+
+If running from a server, follow the instructions for running a Rails app on it (again, follow [this guide]((https://devcenter.heroku.com/articles/getting-started-with-rails5)) if using Heroku).
 
 ##### Jobs
 
@@ -37,5 +61,3 @@ Each `User` will have:
   - Card Exp Year - `card_exp_year:string`
   - Expires at - `expires_at:datetime`
   - Admin - `admin:boolean`
-
-[Demo](https://jsnspr-ror-stripe-job-board.herokuapp.com)
