@@ -10,7 +10,7 @@ If there are errors along the way the form will offer error feedback for both th
 
 Copy the files locally.
 
-Make sure you have [PostgreSQL installed](https://www.postgresql.org/).
+Make sure you have [PostgreSQL installed](https://www.postgresql.org/). 
 
 Edit db/seeds.rb and replace the default user info with your own or any fake account you wish to use. Don't use a password you use for other accounts. You can also edit the default job seeds to whatever you want or remove them entirely. 
 
