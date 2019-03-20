@@ -26,7 +26,7 @@
       <%= link_to image_tag(@job.avatar_url(:thumb), alt: @job.job_author, class: "has-text-centered"), @job.url %>
     <% end %>
 
-    <%= link_to 'Apply to this job', @job.apply_url, class:"button is-rounded is-fullwidth is-primary" %>
+    <h5 class="subtitle is-5 has-text-centered"><%= link_to @job.job_author, @job.url, class: "has-text-grey" %></h5>
 
     <% if current_user.try(:admin) || job_author(@job) %>
       <ul class="pv3">
