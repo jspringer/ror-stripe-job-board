@@ -1,4 +1,4 @@
-### Job Board
+# Job Board
 
 Simple CRUD job board that allows logged in users to post new job listings for a set fee (default set is $3000 (3000) for 30 day). The charges and credit card form is handled by [Stripe](https://stripe.com) via the Stripe API and Ruby Gem. 
 
