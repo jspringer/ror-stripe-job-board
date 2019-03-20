@@ -9,7 +9,7 @@
 user = User.new(
   id: 2,
   name: "Jason S.",
-  email: "jason@example2.com",
+  email: "jason@example.com",
   password: "password",
   password_confirmation: "password"
 )
