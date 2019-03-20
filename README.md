@@ -1,4 +1,4 @@
-## Job Board
+### Job Board
 
 Simple CRUD job board that allows logged in users to post new job listings for a set fee (default set is $3000 (3000) for 30 day). The charges and credit card form is handled by [Stripe](https://stripe.com) via the Stripe API and Ruby Gem. 
 
@@ -6,7 +6,7 @@ If there are errors along the way the form will offer error feedback for both th
 
 [Demo](https://jsnspr-ror-stripe-job-board.herokuapp.com)
 
-### Set up
+## Set up
 
 Copy the files locally.
 
@@ -36,7 +36,7 @@ If running from a server, follow the instructions for running a Rails app on it 
 
 If using Heroku to host, everytime the [Dyno](https://www.heroku.com/dynos) shuts down, the data uploaded (company avatar/logo images) will be lost but the DB data will remain the same resulting in broken images. This is just due to the way Heroku works when using a free account with Dynos that shut down after 30 min of inactivity (meant for showing demos / testing and not persistent live hosting) and not an issue with the app. You can edit those entries to reupload the image, but obviously this will be an issue every time the Dyno shuts down. 
 
-### Database details
+## Database details
 
 Each `Job` will feature the following:
 
