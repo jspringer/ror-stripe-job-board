@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.new(
-  id: 2,
+  id: 1,
   name: "Jason S.",
   email: "jason@example.com",
   password: "password",
@@ -16,7 +16,7 @@ user = User.new(
 user.save!
 
 user2 = User.new(
-  id: 3,
+  id: 2,
   name: "JS",
   email: "jason@example2.com",
   password: "password2",
@@ -117,7 +117,7 @@ Job.create!([{
   location: "San Francisco, CA",
   job_author: "Twitter",
   user_id: user.id,
-  avatar: Rails.root.join("app/assets/images/twitter.jog").open,
+  avatar: Rails.root.join("app/assets/images/twitter.jpg").open,
   remote_ok: false
 },
 {
