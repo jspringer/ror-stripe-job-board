@@ -34,6 +34,8 @@ If running locally, install the gems via `bundle install` from the command line.
 
 If running from a server, follow the instructions for running a Rails app on it (again, follow [this guide](https://devcenter.heroku.com/articles/getting-started-with-rails5) if using Heroku).
 
+If using Heroku to host, everytime the [Dyno](https://www.heroku.com/dynos) shuts down, the data uploaded (company avatar/logo images) will be lost but the DB data will remain the same resulting in broken images. This is just due to the way Heroku works when using a free account with Dynos that shut down after 30 min of inactivity (meant for showing demos / testing and not persistent live hosting) and not an issue with the app. You can edit those entries to reupload the image, but obviously this will be an issue every time the Dyno shuts down. 
+
 ### Database details
 
 Each `Job` will feature the following:
