@@ -32,7 +32,7 @@ If running on a server, you will need to set up the environment variables on the
 
 If running locally, install the gems via `bundle install` from the command line. If you make any changes to the Gemfile, you need to run `bundle install` again to generate a new a new Gemfile.lock file. 
 
-If running from a server, follow the instructions for running a Rails app on it (again, follow [this guide]((https://devcenter.heroku.com/articles/getting-started-with-rails5)) if using Heroku).
+If running from a server, follow the instructions for running a Rails app on it (again, follow [this guide](https://devcenter.heroku.com/articles/getting-started-with-rails5) if using Heroku).
 
 ### Database details
 
